@@ -18,8 +18,9 @@ const Operators = () => {
   const ntOperators = css`
     display: grid;
     margin: 0;
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(5, 1fr);
+    grid-template-columns: 100px;
+    grid-template-rows: repeat(5, 100px);
+    grid-gap: 10px;
   `;
 
   return (

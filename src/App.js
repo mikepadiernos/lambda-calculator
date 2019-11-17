@@ -19,15 +19,21 @@ function App() {
   // Don't forget to pass the functions (and any additional data needed) to the components as props
 
   const cont = css`
+    padding: 0;
+  `;
+
+  const appContainer = css`
     padding: 1.5rem;
+    width: 500px;
   `;
 
   const btnWrapper = css`
     display: grid;
+    font-size: 1rem;
     margin: 0;
-    padding: 1.5rem 0;
-    width: 450px;
-    grid-template-columns: 75% 25%;
+    padding: 1.5rem 0 0;
+    width: 100%;
+    grid-template-columns: 80% 100px;
     grid-template-rows: auto auto;
     grid-template-areas: 
       "specials operators"
@@ -38,14 +44,16 @@ function App() {
 
   return (
     <div className={cx("container", cont)}>
-      <Logo />
-      <div className="App">
-        <Display />
-        {/* STEP 4 - Render your components here and be sure to properly import/export all files */}
-        <div className={cx(btnWrapper)}>
-          <Specials/>
-          <Numbers/>
-          <Operators/>
+      <div className={cx(appContainer)}>
+        <Logo />
+        <div className="App">
+          <Display />
+          {/* STEP 4 - Render your components here and be sure to properly import/export all files */}
+          <div className={cx(btnWrapper)}>
+            <Specials/>
+            <Numbers/>
+            <Operators/>
+          </div>
         </div>
       </div>
     </div>

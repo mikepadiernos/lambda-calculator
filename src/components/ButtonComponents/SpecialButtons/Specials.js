@@ -14,12 +14,15 @@ const Specials = () => {
 
   const contSpecials = css`
     grid-area: specials;
+    padding-right: 8%;
+    padding-bottom: 10px;
   `;
 
   const ntSpecials = css`
     display: grid;
     margin: 0;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, 100px);
+    justify-content: space-between;
   `;
 
   return (

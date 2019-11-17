@@ -3,6 +3,7 @@ import {csx, css} from "emotion";
 
 export const btn = css`
 		border-radius: 50px;
+		font-size: 1.5rem;
 		width: 100px;
 		height: 100px;
 		&:nth-child(10) {

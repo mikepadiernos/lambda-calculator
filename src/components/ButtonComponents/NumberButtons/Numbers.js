@@ -18,14 +18,17 @@ const Numbers = () => {
 
   const contNumbers = css`
     grid-area: numbers;
+    padding-right: 8%;
   `;
 
   const ntNumbers = css`
     display: grid;
     margin: 0;
-    grid-template-columns: repeat(3, auto);
-    grid-template-rows: auto auto auto auto;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(4, 100px);
     grid-auto-flow: row dense;
+    justify-content: space-between;
+    grid-gap: 10px;
   `;
 
   return (
