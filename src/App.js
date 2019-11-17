@@ -1,6 +1,9 @@
 import React from "react";
 import {cx, css} from "emotion";
 import "./app.css";
+
+import {cont, appContainer, btnWrapper} from "./components/styles";
+
 // STEP 4 - import the button and display components
 // Don't forget to import any extra css/scss files you build into the correct component
 
@@ -17,30 +20,6 @@ function App() {
   // Your functions should accept a parameter of the the item data being displayed to the DOM (ie - should recieve 5 if the user clicks on
   // the "5" button, or the operator if they click one of those buttons) and then call your setter function to update state.
   // Don't forget to pass the functions (and any additional data needed) to the components as props
-
-  const cont = css`
-    padding: 0;
-  `;
-
-  const appContainer = css`
-    padding: 1.5rem;
-    width: 500px;
-  `;
-
-  const btnWrapper = css`
-    display: grid;
-    font-size: 1rem;
-    margin: 0;
-    padding: 1.5rem 0 0;
-    width: 100%;
-    grid-template-columns: 80% 100px;
-    grid-template-rows: auto auto;
-    grid-template-areas: 
-      "specials operators"
-      "numbers operators";
-    `;
-
-  const btnContainer = css``;
 
   return (
     <div className={cx("container", cont)}>
