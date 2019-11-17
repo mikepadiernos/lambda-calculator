@@ -18,7 +18,8 @@ const Specials = () => {
 
   const ntSpecials = css`
     display: grid;
-    grid-template-columns: auto auto auto;
+    margin: 0;
+    grid-template-columns: repeat(3, 1fr);
   `;
 
   return (

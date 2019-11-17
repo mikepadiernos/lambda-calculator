@@ -20,12 +20,20 @@ const Numbers = () => {
     grid-area: numbers;
   `;
 
+  const ntNumbers = css`
+    display: grid;
+    margin: 0;
+    grid-template-columns: repeat(3, auto);
+    grid-template-rows: auto auto auto auto;
+    grid-auto-flow: row dense;
+  `;
+
   return (
     <div className={cx(contNumbers)}>
       {/* STEP 3 - Use .map() to iterate over your array data and return a button
        component matching the name on the provided file. Pass
        it any props needed by the child component*/}
-       <div>
+       <div className={cx(ntNumbers)}>
         {numberButtons.map((value, index) => {
           return (
             <NumberButton

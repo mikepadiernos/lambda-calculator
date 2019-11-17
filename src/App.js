@@ -18,20 +18,26 @@ function App() {
   // the "5" button, or the operator if they click one of those buttons) and then call your setter function to update state.
   // Don't forget to pass the functions (and any additional data needed) to the components as props
 
+  const cont = css`
+    padding: 1.5rem;
+  `;
+
   const btnWrapper = css`
     display: grid;
     margin: 0;
+    padding: 1.5rem 0;
+    width: 450px;
     grid-template-columns: 75% 25%;
-    grid-template-rows: 50% 50%;
+    grid-template-rows: auto auto;
     grid-template-areas: 
       "specials operators"
-      "numbers operators"
+      "numbers operators";
     `;
 
   const btnContainer = css``;
 
   return (
-    <div className="container">
+    <div className={cx("container", cont)}>
       <Logo />
       <div className="App">
         <Display />
