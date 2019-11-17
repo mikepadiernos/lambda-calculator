@@ -1,4 +1,5 @@
 import React, {useState} from "react";
+import {cx, css} from "emotion";
 
 //import any components needed
 // example of import from data.js. Note all the ../   This is how we move through folders. 
@@ -15,19 +16,25 @@ const Numbers = () => {
 
   const [numberButtons, setNumberButtons] = useState(numbers);
 
+  const contNumbers = css`
+    grid-area: numbers;
+  `;
+
   return (
-    <div className='btn-container container-numbers'>
+    <div className={cx(contNumbers)}>
       {/* STEP 3 - Use .map() to iterate over your array data and return a button
        component matching the name on the provided file. Pass
        it any props needed by the child component*/}
-      {numberButtons.map((value, index) => {
-        return (
-          <NumberButton
-            key={index}
-            button={value}
-          />
-        )
-      })}
+       <div>
+        {numberButtons.map((value, index) => {
+          return (
+            <NumberButton
+              key={index}
+              button={value}
+            />
+          )
+        })}
+       </div>
     </div>
   );
 };

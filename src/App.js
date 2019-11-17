@@ -1,5 +1,6 @@
 import React from "react";
-import "./css/app.css";
+import {cx, css} from "emotion";
+import "./app.css";
 // STEP 4 - import the button and display components
 // Don't forget to import any extra css/scss files you build into the correct component
 
@@ -17,16 +18,28 @@ function App() {
   // the "5" button, or the operator if they click one of those buttons) and then call your setter function to update state.
   // Don't forget to pass the functions (and any additional data needed) to the components as props
 
+  const btnWrapper = css`
+    display: grid;
+    margin: 0;
+    grid-template-columns: 75% 25%;
+    grid-template-rows: 50% 50%;
+    grid-template-areas: 
+      "specials operators"
+      "numbers operators"
+    `;
+
+  const btnContainer = css``;
+
   return (
     <div className="container">
       <Logo />
       <div className="App">
         <Display />
         {/* STEP 4 - Render your components here and be sure to properly import/export all files */}
-        <div className='btn-wrapper'>
+        <div className={cx(btnWrapper)}>
           <Specials/>
-          <Operators/>
           <Numbers/>
+          <Operators/>
         </div>
       </div>
     </div>

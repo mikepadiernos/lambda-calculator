@@ -4,7 +4,7 @@
   max-width: 550px;
   border-radius: 15px;
   border: 2px solid grey;
-  padding: 25px;
+  padding-bottom: 25px;
 }
 
 .display {
@@ -21,5 +21,3 @@
   padding-right: 8%;
   font-size: 5rem;
 }
-
-/*# sourceMappingURL=app.css.map */

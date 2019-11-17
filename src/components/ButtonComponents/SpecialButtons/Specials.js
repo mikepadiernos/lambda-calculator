@@ -1,4 +1,5 @@
 import React, {useState} from "react";
+import {cx, css} from "emotion";
 
 //import any components needed
 //Import your array data to from the provided data file
@@ -11,19 +12,30 @@ const Specials = () => {
 
   const [specialButtons, setSpecialButtons] = useState(specials);
 
+  const contSpecials = css`
+    grid-area: specials;
+  `;
+
+  const ntSpecials = css`
+    display: grid;
+    grid-template-columns: auto auto auto;
+  `;
+
   return (
-    <div className='btn-container container-specials'>
+    <div className={cx(contSpecials)}>
       {/* STEP 3 - Use .map() to iterate over your array data and return a button
        component matching the name on the provided file. Pass
        it any props needed by the child component*/}
-      {specialButtons.map((value, index) => {
-        return (
-          <SpecialButton
-            key={index}
-            button={value}
-          />
-        )
-      })}
+       <div className={cx(ntSpecials)}>
+        {specialButtons.map((value, index) => {
+          return (
+            <SpecialButton
+              key={index}
+              button={value}
+            />
+          )
+        })}
+      </div>
     </div>
   );
 };

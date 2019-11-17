@@ -1,4 +1,5 @@
 import React, {useState} from "react";
+import {cx, css} from "emotion";
 
 //import any components needed
 //Import your array data to from the provided data file
@@ -10,19 +11,31 @@ const Operators = () => {
   // STEP 2 - add the imported data to state
   const [operatorButtons, setOperatorButtons] = useState(operators);
 
+  const contOperators = css`
+    grid-area: operators;
+  `;
+
+  const ntOperators = css`
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto auto auto auto auto;
+  `;
+
   return (
-    <div className='btn-container container-operators'>
+    <div className={cx(contOperators)}>
       {/* STEP 3 - Use .map() to iterate over your array data and return a button
        component matching the name on the provided file. Pass
        it any props needed by the child component*/}
-      {operatorButtons.map((value, index) => {
-        return (
-            <OperatorButton
-              key={index}
-              button={value}
-            />
-          )
-      })}
+       <div className={cx(ntOperators)}>
+        {operatorButtons.map((value, index) => {
+          return (
+              <OperatorButton
+                key={index}
+                button={value}
+              />
+            )
+        })}
+       </div>
     </div>
   );
 };
