@@ -10,7 +10,7 @@ const btnNumbers = css`
 
 const NumberButton = props => {
   return (
-    <button className={cx(btn, btnNumbers, 'btn btn-numbers')}>
+    <button onClick={() => props.setDisplay(props.button)} className={cx(btn, btnNumbers, 'btn btn-numbers')}>
       {/* Display a button element rendering the data being passed down from the parent container on props */}
       <span>
         {props.button}
